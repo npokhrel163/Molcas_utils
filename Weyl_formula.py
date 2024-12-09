@@ -1,7 +1,7 @@
 #calculates the weyl formula for number of size of total CI expansion
 
 '''
-@author = npokh
+@author = npokhrel
 '''
 
 #arguments are
@@ -19,7 +19,8 @@ def compute_weyl(N_elect, n_orbital, N_spin):
     comb1 = compute_binomial(n_orbital+1,N_elect/2-N_spin)
     comb2 = compute_binomial(n_orbital+1, N_elect/2+N_spin+1)
     N_Cas = (2*N_spin+1)/(n_orbital+1) * comb1 * comb2
-    return N_Cas
+    return ("The output with " + str(N_elect) + " electrons and "+ str(n_orbital) +  
+            " orbitals and spin " +str(N_spin) +    " is " + str(N_Cas)   )
 
 
 print(compute_weyl(2,2,0))
